@@ -9,13 +9,13 @@ def three_sum(arr)
   count = 0
 
   # loop through each array
-  (0..arr.length-3).each { |i|
-    (i+1..arr.length-2).each { |j|
-      (i+2..arr.length-1).each { |k|
-      # check if the three elements sum to 0
-      if (arr[i]+arr[j]+arr[k] == 0)
-        count += 1
-      end
+  (0..arr.length - 3).each { |i|
+    (i + 1..arr.length - 2).each { |j|
+      (i + 2..arr.length - 1).each { |k|
+        # check if the three elements sum to 0
+        if (arr[i] + arr[j] + arr[k] == 0)
+          count += 1
+        end
       }
     }
   }
@@ -33,8 +33,8 @@ def three_sum_fast(arr)
   arr = merge_sort(arr)
   count = 0
 
-  (0..arr.length-1).each { |i|
-    (i+1..arr.length-1).each { |j|
+  (0..arr.length - 1).each { |i|
+    (i + 1..arr.length - 1).each { |j|
       if bin_search(arr, -arr[i] - arr[j]) > j
         count += 1
       end
@@ -69,11 +69,11 @@ def three_sum_fastest(arr)
   arr = merge_sort(arr)
   count = 0
 
-  (0..arr.length-2).each { |i|
+  (0..arr.length - 2).each { |i|
     set = Set.new
 
-    (i+1..arr.length-1).each { |j|
-      if set.include?(-arr[i]-arr[j])
+    (i + 1..arr.length - 1).each { |j|
+      if set.include?(-arr[i] - arr[j])
         count += 1
       end
 
@@ -89,7 +89,7 @@ def bin_search(arr, key)
   low = 0
   high = arr.length - 1
   while high >= low do
-    mid = low  + (high - low) / 2
+    mid = low + (high - low) / 2
     if arr[mid] > key
       high = mid - 1
     elsif arr[mid] < key
@@ -117,7 +117,7 @@ def merge_sort(arr)
   n_arr = []
 
   # sort the sub arrays
-  while[a1,a2].none? {|a| a.empty? } do
+  while [a1, a2].none? { |a| a.empty? } do
     if a1[0] < a2[0]
       n_arr << a1.shift
     else
