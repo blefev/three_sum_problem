@@ -66,7 +66,6 @@ end
 # problems, and dynamic programming comes up
 # as the fastest solution very frequently.
 def three_sum_fastest(arr)
-  arr = merge_sort(arr)
   count = 0
 
   (0..arr.length - 2).each { |i|
