@@ -1,5 +1,4 @@
 require_relative 'threesums.rb'
-require_relative 'tests.rb'
 require 'benchmark'
 
 def main

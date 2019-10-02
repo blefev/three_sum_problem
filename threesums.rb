@@ -9,9 +9,9 @@ def three_sum(arr)
   count = 0
 
   # loop through each array
-  (0..arr.length - 3).each { |i|
-    (i + 1..arr.length - 2).each { |j|
-      (i + 2..arr.length - 1).each { |k|
+  (0..arr.length - 1).each { |i|
+    (i + 1..arr.length - 1).each { |j|
+      (j + 1..arr.length - 1).each { |k|
         # check if the three elements sum to 0
         if (arr[i] + arr[j] + arr[k] == 0)
           count += 1
